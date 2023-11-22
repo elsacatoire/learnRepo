@@ -1,3 +1,8 @@
+# Hello
+
+I'm Elsa, FullStack developper (learner). I am curious about full Stack frameworks.
+I have started this project in order to handle v13 of NextJS and understand the server-side compnents.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -19,6 +24,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## What is for what ?
+
+this project is launched with shadcn/ui library on top of NextJS : https://ui.shadcn.com/
+
+lucide-react library is where we can find icons : https://lucide.dev/
+
+next-themes library to handle really easly the theme
 
 ## Learn More
 
