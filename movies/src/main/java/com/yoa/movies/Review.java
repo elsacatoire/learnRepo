@@ -15,4 +15,8 @@ public class Review {
     @org.springframework.data.annotation.Id
     private ObjectId Id;
     private  String body;
+
+    public Review(String body) {
+        this.body = body;
+    }
 }
