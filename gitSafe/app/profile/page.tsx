@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input'
 export default function Profile() {
     return (
         <div className='m-4'>
-            <Button>Click me</Button>
+            <Button variant={'axel'}>Click me</Button>
             <Input />
         </div>
     )

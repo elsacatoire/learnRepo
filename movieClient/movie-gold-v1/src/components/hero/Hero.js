@@ -9,7 +9,7 @@ const Hero = ({ movies }) => {
         <div>
             <Carousel>
                 {
-                    movies.map((movie) => {
+                    movies?.map((movie) => {
                         return (
                             <Paper>
                                 <div className='movie-card-container'>
