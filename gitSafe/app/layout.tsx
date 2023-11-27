@@ -1,5 +1,5 @@
-/* import { Footer } from '@/src/features/layout/Footer';
-import { Header } from '@/src/features/layout/Header'; */
+/* import { Footer } from '@/src/features/layout/Footer'; */
+import { Header } from '@/src/features/layout/Header';
 
 import clsx from 'clsx';
 import type { Metadata } from 'next';
@@ -25,7 +25,7 @@ export default function RootLayout({ children, modal }: LayoutProps) {
       <body className={clsx(inter.className, 'bg-background h-full')}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex flex-col h-full">
-            {/* <Header /> */}
+            <Header />
             <div className="flex-1 max-w-lg m-auto py-12 w-full">{children}</div>
             {/* <Footer /> */}
           </div>
