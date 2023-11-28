@@ -1,4 +1,4 @@
-/* import { Footer } from '@/src/features/layout/Footer'; */
+import { Footer } from '@/src/features/layout/Footer';
 import { Header } from '@/src/features/layout/Header';
 
 import clsx from 'clsx';
@@ -27,7 +27,7 @@ export default function RootLayout({ children, modal }: LayoutProps) {
           <div className="flex flex-col h-full">
             <Header />
             <div className="flex-1 max-w-lg m-auto py-12 w-full">{children}</div>
-            {/* <Footer /> */}
+            <Footer />
           </div>
           {modal}
         </ThemeProvider>
