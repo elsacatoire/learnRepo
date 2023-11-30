@@ -1,4 +1,3 @@
-import React from 'react'
 import { Flex, Alert, AlertIcon } from '@chakra-ui/react'
 
 const NoTask = () => {
@@ -6,7 +5,7 @@ const NoTask = () => {
         <Flex>
             <Alert status='warning'>
                 <AlertIcon />
-                Pas de tâches pour le moment
+                Pas de tâche pour le moment
             </Alert>
         </Flex>
     )
