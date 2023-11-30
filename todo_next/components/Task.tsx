@@ -34,6 +34,13 @@ const Task = ({ individualTask, handleCompleteTask, handleDeleteTask }: TaskProp
                             <CheckIcon />
                         </Button>
                     )}
+                    <Button
+                        ml="1rem"
+                        colorScheme="red"
+                        onClick={() => handleDeleteTask(individualTask._id)}
+                    >
+                        <DeleteIcon />
+                    </Button>
                 </Flex>
             </Flex>
         </Card>
