@@ -1,46 +1,47 @@
 'use client'
 
-import { Input, Text, Button, Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
-
+import { Input, Text, Button, Card, CardHeader, CardBody, CardFooter, Heading, Textarea } from '@chakra-ui/react'
 import React from 'react'
-
-
-
+import { useAppContext } from '@/app/context'
 
 
 const Editor = () => {
-    /* const handleNameChange = (event: any) => {
-        const newName = event.target.value;
-        store.dispatch(updateName(newName))
-        console.log("newName = " + newName);
 
-        console.log(store.getState());
+    const { title, description, image, updateContent } = useAppContext();
+    const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newTitle = e.target.value;
+        updateContent(newTitle, description, image);
+        console.log(newTitle);
+    };
+
+    const handleDescriptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newDescription = e.target.value;
+        updateContent(title, newDescription, image);
+        console.log(description);
+    };
+
+    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newImage = e.target.value;
+        updateContent(title, description, newImage);
+    };
 
 
-        const state = store.getState()
-        console.log("state = " + state);
-        console.log(".title = " + state.title.payload);
-        console.log(".description = " + state.descirption);
-
-
-
-
-
-    }; */
     return (
         <div>
             <Card>
                 <CardBody>
-                    <Text fontSize='xl'>Customize your notification</Text>
-                    <Input placeholder='App Name' /* onChange={handleNameChange} */ />
+                    <Card>
+                        <CardHeader>
+                            <Heading size='md'>Customize your notification</Heading>
+                        </CardHeader>
+                        <Text fontSize='xl'></Text>
+                        <Input placeholder='App Name' onChange={handleTitleChange} />
+                        <Input h="10rem" placeholder="Text's notification" onChange={handleDescriptionChange} />
+                        <Input placeholder='link to your image' onChange={handleImageChange} />
+                    </Card>
                 </CardBody>
-                <CardBody>
-                    <Text>
-                        app name : { }
-                    </Text>
-                </CardBody>
-            </Card>
-        </div>
+            </Card >
+        </div >
     )
 }
 
