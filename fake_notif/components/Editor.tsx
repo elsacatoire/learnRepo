@@ -3,26 +3,44 @@
 import { Input, Text, Box, Card, CardHeader, Image, Heading, Flex } from '@chakra-ui/react'
 import React from 'react'
 import { useAppContext } from '@/app/context'
+import BackgroundImage from './BackgroundImage'
+import LogoImage from './LogoImage'
 
 
 const Editor = () => {
 
-    const { title, description, image, updateContent } = useAppContext();
+    const backgroundData = [
+        "/images/screen_bg/automn.jpg",
+        "/images/screen_bg/binaire.jpg",
+        "/images/screen_bg/pride.avif",
+        "/images/screen_bg/red.jpg",
+        "/images/screen_bg/rocks.jpg",
+        "/images/screen_bg/sandy.jpg"
+    ]
+
+    const logoData = [
+        "/images/instagram.webp",
+        "/images/facebook.png",
+        "/images/whatsapp.webp",
+        "/images/spotify.png"
+    ]
+
+    const { title, description, image, background, updateContent } = useAppContext();
     const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newTitle = e.target.value;
-        updateContent(newTitle, description, image);
+        updateContent(newTitle, description, image, background);
         console.log(newTitle);
     };
 
     const handleDescriptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newDescription = e.target.value;
-        updateContent(title, newDescription, image);
+        updateContent(title, newDescription, image, background);
         console.log(description);
     };
 
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newImage = e.target.value;
-        updateContent(title, description, newImage);
+        updateContent(title, description, newImage, background);
     };
 
     return (
@@ -39,81 +57,17 @@ const Editor = () => {
             <Box p="3">
                 <Text p="2" marginTop="2" fontWeight="bold">Background image</Text>
                 <Flex justifyContent="space-between">
-                    <Image
-                        borderRadius='md'
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/screen_bg/automn.jpg"
-                        alt='Whatsapp logo'
-                    />
-                    <Image
-                        borderRadius='md'
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/screen_bg/binaire.jpg"
-                        alt='Whatsapp logo'
-                    />
-                    <Image
-                        borderRadius='md'
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/screen_bg/pride.avif"
-                        alt='Whatsapp logo'
-                    />
-                    <Image
-                        borderRadius='md'
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/screen_bg/red.jpg"
-                        alt='Whatsapp logo'
-                    />
-                    <Image
-                        borderRadius='md'
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/screen_bg/rocks.jpg"
-                        alt='Whatsapp logo'
-                    />
-                    <Image
-                        borderRadius='md'
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/screen_bg/sandy.jpg"
-                        alt='Whatsapp logo'
-                    />
+                    {backgroundData.map((src, index) => (
+                        <BackgroundImage key={index} src={src} alt="test" />
+                    ))}
                 </Flex>
                 <Text p="2" marginTop="2" fontWeight="bold">Application name</Text>
                 <Input p="2" fontWeight="bold" placeholder={title} onChange={handleTitleChange} />
                 <Text p="2" marginTop="2" fontWeight="bold">Logo</Text>
                 <Flex>
-                    <Image
-                        p="2"
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/instagram.webp"
-                        alt='Whatsapp logo'
-                    />
-                    <Image
-                        p="2"
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/facebook.png"
-                        alt='Whatsapp logo'
-                    />
-                    <Image
-                        p="2"
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/whatsapp.webp"
-                        alt='Whatsapp logo'
-                    />
-                    <Image
-                        p="2"
-                        boxSize='50px'
-                        objectFit='cover'
-                        src="/images/spotify.png"
-                        alt='Whatsapp logo'
-                    />
+                    {logoData.map((src, index) => (
+                        <LogoImage key={index} src={src} alt="test" />
+                    ))}
                 </Flex>
                 <Text p="2" marginTop="2" fontWeight="bold">Notification text</Text>
                 <Input p="2" h="4rem" placeholder={description} onChange={handleDescriptionChange} />

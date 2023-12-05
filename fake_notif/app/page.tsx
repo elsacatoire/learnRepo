@@ -5,7 +5,7 @@ import Editor from '@/components/Editor'
 
 export default function Home() {
 
-  const minHeight = '600px'
+
   return (
     <>
       <Flex
