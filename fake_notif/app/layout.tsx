@@ -14,12 +14,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AppProvider>
-          <ChakraProvider>
+        <ChakraProvider>
+          <AppProvider>
             {<Header />}
             {children}
-          </ChakraProvider>
-        </AppProvider>
+          </AppProvider>
+        </ChakraProvider>
       </body>
     </html>
   )
