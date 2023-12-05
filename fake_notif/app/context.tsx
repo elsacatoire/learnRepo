@@ -17,8 +17,8 @@ interface AppProviderProps {
 }
 
 export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
-    const [title, setTitle] = useState<string>('');
-    const [description, setDescription] = useState<string>('');
+    const [title, setTitle] = useState<string>('WhatsApp');
+    const [description, setDescription] = useState<string>('You recieved money from 6666 it is way fun you are rich');
     const [image, setImage] = useState<string>(defaultImage);
 
     const updateContent = (newTitle: string, newDescription: string, newImage: string) => {

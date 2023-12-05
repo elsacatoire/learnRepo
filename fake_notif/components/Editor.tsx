@@ -1,6 +1,6 @@
 'use client'
 
-import { Input, Text, Button, Card, CardHeader, CardBody, CardFooter, Heading, Textarea } from '@chakra-ui/react'
+import { Input, Text, Box, Card, CardHeader, CardBody, CardFooter, Heading, Textarea } from '@chakra-ui/react'
 import React from 'react'
 import { useAppContext } from '@/app/context'
 
@@ -25,21 +25,24 @@ const Editor = () => {
         updateContent(title, description, newImage);
     };
 
-
     return (
-        <Card>
-            <CardBody>
-                <Card>
-                    <CardHeader>
-                        <Heading size='md'>Customize your notification</Heading>
-                    </CardHeader>
-                    <Text fontSize='xl'></Text>
-                    <Input placeholder='App Name' onChange={handleTitleChange} />
-                    <Input h="10rem" placeholder="Text's notification" onChange={handleDescriptionChange} />
-                    <Input placeholder='link to your image' onChange={handleImageChange} />
-                </Card>
-            </CardBody>
-        </Card >
+        <Card maxW="400px">
+            <CardHeader >
+                <Heading size='md'>Customize your notification</Heading>
+                <Text>
+                    With this tool you can create a fake notifictaions image and share it with your friends!
+                </Text>
+            </CardHeader>
+            <Box p="3">
+                <Text p="2" marginTop="2" fontWeight="bold">Application name</Text>
+                <Input p="2" fontWeight="bold" placeholder={title} onChange={handleTitleChange} />
+                <Text p="2" marginTop="2" fontWeight="bold">Notification text</Text>
+                <Input p="2" h="10rem" placeholder={description} onChange={handleDescriptionChange} />
+                <Text p="2" marginTop="2" fontWeight="bold">Logo image link</Text>
+                <Input p="2" placeholder='link to your image' onChange={handleImageChange} />
+            </Box>
+
+        </Card>
     )
 }
 

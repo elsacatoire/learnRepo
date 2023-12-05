@@ -16,7 +16,7 @@ export default function RootLayout({
       <body>
         <AppProvider>
           <ChakraProvider>
-            <Header />
+            {<Header />}
             {children}
           </ChakraProvider>
         </AppProvider>

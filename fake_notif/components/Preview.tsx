@@ -16,8 +16,10 @@ const Preview = () => {
             minW="300px"
             minH="600px"
             maxH="800px"
-            backgroundImage="https://img.freepik.com/photos-premium/fond-ecran-iphone-est-meilleur-fond-ecran-haute-definition-pour-iphone-vous-pouvez-creer-fond-ecran-pour-vos-arriere-plans-iphone-x-votre-economiseur-ecran-mobile-votre-ecran-verrouillage-ipad-iphone-iphone-6-plus-mur_900321-19761.jpg" >
-            <Flex marginTop="4px" marginX="15px">
+            backgroundImage="https://img.freepik.com/photos-premium/fond-ecran-iphone-est-meilleur-fond-ecran-haute-definition-pour-iphone-vous-pouvez-creer-fond-ecran-pour-vos-arriere-plans-iphone-x-votre-economiseur-ecran-mobile-votre-ecran-verrouillage-ipad-iphone-iphone-6-plus-mur_900321-19761.jpg"
+
+        >
+            <Flex marginTop="4px" marginX="15px" backgroundColor="FFFFFF">
                 <Box flex='1' alignContent="left">
                     <Text fontSize="small" color="white">Free</Text>
                 </Box>
@@ -26,29 +28,29 @@ const Preview = () => {
                     <FontAwesomeIcon icon={faBatteryHalf} style={{ color: "#ffffff", }} rotation={270} />
                 </Box>
             </Flex>
-            <Box
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
+            <CardBody
             >
-                <CardBody maxW='300px' minW="280px" minH="200px" maxH="200px" rounded="5%" backgroundColor="#FFFFFF90" >
-                    <Box
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                        height="60vh"
-                    >
-                        <Image
-                            boxSize='25px'
-                            objectFit='cover'
-                            src={image}
-                            alt='Dan Abramov'
-                        />
-                        <Text variant='ghost'> {title} </Text>
-                        <Text> {description} </Text>
-                    </Box>
-                </CardBody>
-            </Box>
+                <Flex
+                    rounded='0.375rem'
+                    p="4"
+                    bg="#ffffffD6"
+                    maxW='280px'
+                    minW="260px"
+
+                >
+                    <Image
+                        p="2"
+                        boxSize='50px'
+                        objectFit='cover'
+                        src={image}
+                        alt='Whatsapp logo'
+                    />
+                    <Flex direction="column" justifyContent="center">
+                        <Text fontWeight="bold"> {title} </Text>
+                        <Text fontSize="small"> {description} </Text>
+                    </Flex>
+                </Flex>
+            </CardBody>
         </Card>
     );
 }
