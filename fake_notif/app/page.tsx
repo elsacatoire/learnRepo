@@ -1,15 +1,21 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, Box } from '@chakra-ui/react'
 import Preview from '@/components/Preview'
 import Editor from '@/components/Editor'
-import Header from '@/components/Header'
+
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <Flex direction="row" minWidth='max-content' alignItems='center' gap='10' >
-        <Editor />
-        <Preview />
+      <Flex
+        height="100vh"
+        alignItems="center"
+        justifyContent="center">
+        <Box width="30%">
+          <Editor />
+        </Box>
+        <Box width="50%">
+          <Preview />
+        </Box>
       </Flex>
     </>
   )

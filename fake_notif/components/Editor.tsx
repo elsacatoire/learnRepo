@@ -27,21 +27,19 @@ const Editor = () => {
 
 
     return (
-        <div>
-            <Card>
-                <CardBody>
-                    <Card>
-                        <CardHeader>
-                            <Heading size='md'>Customize your notification</Heading>
-                        </CardHeader>
-                        <Text fontSize='xl'></Text>
-                        <Input placeholder='App Name' onChange={handleTitleChange} />
-                        <Input h="10rem" placeholder="Text's notification" onChange={handleDescriptionChange} />
-                        <Input placeholder='link to your image' onChange={handleImageChange} />
-                    </Card>
-                </CardBody>
-            </Card >
-        </div >
+        <Card>
+            <CardBody>
+                <Card>
+                    <CardHeader>
+                        <Heading size='md'>Customize your notification</Heading>
+                    </CardHeader>
+                    <Text fontSize='xl'></Text>
+                    <Input placeholder='App Name' onChange={handleTitleChange} />
+                    <Input h="10rem" placeholder="Text's notification" onChange={handleDescriptionChange} />
+                    <Input placeholder='link to your image' onChange={handleImageChange} />
+                </Card>
+            </CardBody>
+        </Card >
     )
 }
 
