@@ -24,6 +24,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     const [image, setImage] = useState<string>(defaultImage);
     const [background, setBackground] = useState<string>(defaultBackground);
 
+
     const updateContent = (newTitle: string, newDescription: string, newImage: string, newBg: string) => {
         setTitle(newTitle);
         setDescription(newDescription);

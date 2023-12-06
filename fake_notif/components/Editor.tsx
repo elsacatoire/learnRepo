@@ -41,11 +41,6 @@ const Editor = () => {
         updateContent(title, description, newImage, background);
     };
 
-    const handleBackgroundChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newBg = e.target.value;
-        updateContent(title, description, image, newBg);
-    };
-
 
     return (
         <Card
