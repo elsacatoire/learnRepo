@@ -46,7 +46,7 @@ const Preview = ({ }) => {
                     />
                     <Flex direction="column" justifyContent="center">
                         <Text fontWeight="bold"> {title} </Text>
-                        <Text fontSize="small"> {description} </Text>
+                        <Text fontSize="small" noOfLines={undefined}> {description} </Text>
                     </Flex>
                 </Flex>
             </CardBody>
