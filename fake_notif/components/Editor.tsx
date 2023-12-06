@@ -6,7 +6,6 @@ import { useAppContext } from '@/app/context'
 import BackgroundImage from './BackgroundImage'
 import LogoImage from './LogoImage'
 
-
 const Editor = () => {
 
     const backgroundData = [
@@ -54,8 +53,9 @@ const Editor = () => {
 
     return (
         <Card
-            maxW="400px"
+            maxW={{ base: '90%', md: '400px' }} // Responsive card width
             minH='600px'
+            marginX="auto" // Center the card horizontally
         >
             <CardHeader >
                 <Heading size='md'>Customize your notification</Heading>
@@ -63,9 +63,9 @@ const Editor = () => {
                     With this tool you can create a fake notifictaion image and share it with your friends!
                 </Text>
             </CardHeader>
-            <Box p="3">
+            <Box p={{ base: 3, md: 6 }}> {/* Responsive padding */}
                 <Text p="2" marginTop="2" fontWeight="bold">Background image</Text>
-                <Flex justifyContent="space-between">
+                <Flex justifyContent="space-between" flexWrap="wrap">
                     {backgroundData.map((src, index) => (
                         <BackgroundImage key={index} src={src} alt="test" />
                     ))}
@@ -73,7 +73,7 @@ const Editor = () => {
                 <Text p="2" marginTop="2" fontWeight="bold">Application name</Text>
                 <Input p="2" fontWeight="bold" placeholder={title} onChange={handleTitleChange} />
                 <Text p="2" marginTop="2" fontWeight="bold">Logo</Text>
-                <Flex>
+                <Flex flexWrap="wrap">
                     {logoData.map((src, index) => (
                         <LogoImage key={index} src={src} alt="test" />
                     ))}

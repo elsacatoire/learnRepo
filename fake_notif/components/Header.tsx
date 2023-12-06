@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <>
             <nav className="bg-white dark:bg-teal-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-tale-600">
-                <Flex alignItems="center" color="white" p="5" direction="row-reverse">
+                <Flex alignItems="center" color="white" p="5" direction="row-reverse" marginRight='10'>
                     <Heading marginLeft="1" >
                         Fake Notification
                     </Heading>
