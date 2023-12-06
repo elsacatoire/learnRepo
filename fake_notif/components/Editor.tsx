@@ -53,9 +53,9 @@ const Editor = () => {
 
     return (
         <Card
-            maxW={{ base: '90%', md: '400px' }} // Responsive card width
+            maxW={{ base: '90%', md: '400px' }}
             minH='600px'
-            marginX="auto" // Center the card horizontally
+            marginX="auto"
         >
             <CardHeader >
                 <Heading size='md'>Customize your notification</Heading>
@@ -63,7 +63,7 @@ const Editor = () => {
                     With this tool you can create a fake notifictaion image and share it with your friends!
                 </Text>
             </CardHeader>
-            <Box p={{ base: 3, md: 6 }}> {/* Responsive padding */}
+            <Box p={{ base: 3, md: 6 }}>
                 <Text p="2" marginTop="2" fontWeight="bold">Background image</Text>
                 <Flex justifyContent="space-between" flexWrap="wrap">
                     {backgroundData.map((src, index) => (

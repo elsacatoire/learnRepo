@@ -30,6 +30,7 @@ const LogoImage = ({ src, alt }: LogoImageProps) => {
             src={src}
             alt={alt}
             onClick={handleLogoChange}
+            loading="lazy"
         />
     )
 }

@@ -19,7 +19,6 @@ const BackgroundImage = ({ src, alt }: BackgroundImageProps) => {
         updateBackground } = useAppContext();
 
     const handleBackgroundChange = () => {
-        // Update the background image in the context
         updateBackground(src);
     };
 
@@ -31,6 +30,7 @@ const BackgroundImage = ({ src, alt }: BackgroundImageProps) => {
             src={src}
             alt={alt}
             onClick={handleBackgroundChange}
+            loading="lazy"
         />
     )
 }

@@ -10,7 +10,7 @@ const Header = () => {
                     <Heading marginLeft="1" >
                         Fake Notification
                     </Heading>
-                    <FontAwesomeIcon icon={faMobileScreen} style={{ fontSize: "30px" }} />
+                    {/* <FontAwesomeIcon icon={faMobileScreen} style={{ fontSize: "30px" }} /> */}
                 </Flex>
             </nav>
         </>

@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 // Types for the data
 interface AppContextProps {
+
     title: string;
     description: string;
     image: string;

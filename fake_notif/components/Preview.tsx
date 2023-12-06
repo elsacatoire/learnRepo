@@ -18,7 +18,6 @@ const Preview = ({ }) => {
             backgroundImage={background}
             backgroundSize="cover"
             backgroundPosition="center"
-
         >
             <Flex marginTop="4px" marginX="15px" backgroundColor="FFFFFF">
                 <Box flex='1' alignContent="left">
@@ -38,7 +37,6 @@ const Preview = ({ }) => {
                     maxW='300px'
                     minW="280px"
                     marginTop="170px"
-
                 >
                     <Image
                         p="2"
@@ -46,6 +44,7 @@ const Preview = ({ }) => {
                         objectFit='cover'
                         src={image}
                         alt='Whatsapp logo'
+                        loading="lazy" // Active le chargement paresseux
                     />
                     <Flex direction="column" justifyContent="center">
                         <Flex justifyContent='space-between'>
