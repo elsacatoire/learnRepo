@@ -33,11 +33,12 @@ const Preview = ({ }) => {
             >
                 <Flex
                     rounded='0.375rem'
-                    p="4"
+                    p="2"
                     bg="#ffffffD6"
                     maxW='300px'
                     minW="280px"
                     marginTop="170px"
+
                 >
                     <Image
                         p="2"
@@ -47,7 +48,10 @@ const Preview = ({ }) => {
                         alt='Whatsapp logo'
                     />
                     <Flex direction="column" justifyContent="center">
-                        <Text fontWeight="bold"> {title} </Text>
+                        <Flex justifyContent='space-between'>
+                            <Text mb='1' fontWeight="bold"> {title} </Text>
+                            {/*  <Text mb='1' fontSize="smaller" color='gray'> 2 min ago </Text> */}
+                        </Flex>
                         <Text fontSize="small" noOfLines={undefined}> {description} </Text>
                     </Flex>
                 </Flex>
