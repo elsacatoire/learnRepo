@@ -22,7 +22,8 @@ const Editor = () => {
         "/images/instagram.webp",
         "/images/facebook.png",
         "/images/whatsapp.webp",
-        "/images/spotify.png"
+        "/images/spotify.png",
+        "/images/slack.png"
     ]
 
     const { title,
@@ -59,7 +60,7 @@ const Editor = () => {
             <CardHeader >
                 <Heading size='md'>Customize your notification</Heading>
                 <Text>
-                    With this tool you can create a fake notifictaions image and share it with your friends!
+                    With this tool you can create a fake notifictaion image and share it with your friends!
                 </Text>
             </CardHeader>
             <Box p="3">
