@@ -13,11 +13,12 @@ const Preview = ({ }) => {
         <Card
             maxW='320px'
             minW="300px"
-            minH="600px"
+            minH="650px"
             maxH="800px"
             backgroundImage={background}
             backgroundSize="cover"
             backgroundPosition="center"
+
         >
             <Flex marginTop="4px" marginX="15px" backgroundColor="FFFFFF">
                 <Box flex='1' alignContent="left">
@@ -34,8 +35,9 @@ const Preview = ({ }) => {
                     rounded='0.375rem'
                     p="4"
                     bg="#ffffffD6"
-                    maxW='280px'
-                    minW="260px"
+                    maxW='300px'
+                    minW="280px"
+                    marginTop="170px"
                 >
                     <Image
                         p="2"
