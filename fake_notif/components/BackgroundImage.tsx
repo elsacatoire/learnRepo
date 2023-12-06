@@ -1,6 +1,6 @@
 import React from 'react'
-
 import { Image } from '@chakra-ui/react'
+import { useAppContext } from '@/app/context'
 
 type BackgroundImageProps = {
     src: string;
@@ -8,10 +8,12 @@ type BackgroundImageProps = {
 };
 
 const BackgroundImage = ({ src, alt }: BackgroundImageProps) => {
+    const { title, description, image, background, updateContent } = useAppContext();
 
-    function handleBgChange() {
-        return src
-    }
+    const handleBackgroundChange = () => {
+        // Update the background image in the context
+        updateContent(title, description, image, src);
+    };
 
     return (
         <Image
@@ -20,7 +22,7 @@ const BackgroundImage = ({ src, alt }: BackgroundImageProps) => {
             objectFit='cover'
             src={src}
             alt={alt}
-            onClick={handleBgChange}
+            onClick={handleBackgroundChange}
         />
     )
 }

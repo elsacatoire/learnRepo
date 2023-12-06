@@ -29,19 +29,23 @@ const Editor = () => {
     const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newTitle = e.target.value;
         updateContent(newTitle, description, image, background);
-        console.log(newTitle);
     };
 
     const handleDescriptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newDescription = e.target.value;
         updateContent(title, newDescription, image, background);
-        console.log(description);
     };
 
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newImage = e.target.value;
         updateContent(title, description, newImage, background);
     };
+
+    const handleBackgroundChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newBg = e.target.value;
+        updateContent(title, description, image, newBg);
+    };
+
 
     return (
         <Card

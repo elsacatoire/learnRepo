@@ -1,14 +1,13 @@
 'use client'
 
-import { Text, Box, Image, Card, CardHeader, CardBody, Flex } from '@chakra-ui/react'
+import { Text, Box, Image, Card, CardBody, Flex } from '@chakra-ui/react'
 import React from 'react'
 import { useAppContext } from '@/app/context'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBatteryHalf, faWifi } from "@fortawesome/free-solid-svg-icons";
 
-
 const Preview = ({ }) => {
-    const { title, description, image, updateContent } = useAppContext();
+    const { title, description, image, background, updateContent } = useAppContext();
 
     return (
         <Card
@@ -16,8 +15,9 @@ const Preview = ({ }) => {
             minW="300px"
             minH="600px"
             maxH="800px"
-            backgroundImage="https://img.freepik.com/photos-premium/fond-ecran-iphone-est-meilleur-fond-ecran-haute-definition-pour-iphone-vous-pouvez-creer-fond-ecran-pour-vos-arriere-plans-iphone-x-votre-economiseur-ecran-mobile-votre-ecran-verrouillage-ipad-iphone-iphone-6-plus-mur_900321-19761.jpg"
-
+            backgroundImage={background}
+            backgroundSize="cover"
+            backgroundPosition="center"
         >
             <Flex marginTop="4px" marginX="15px" backgroundColor="FFFFFF">
                 <Box flex='1' alignContent="left">
@@ -36,7 +36,6 @@ const Preview = ({ }) => {
                     bg="#ffffffD6"
                     maxW='280px'
                     minW="260px"
-
                 >
                     <Image
                         p="2"
