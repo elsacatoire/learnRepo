@@ -73,7 +73,6 @@ const Editor = () => {
                 <Text p="2" marginTop="2" fontWeight="bold">Logo image link</Text>
                 <Input p="2" placeholder='link to your image' onChange={handleImageChange} />
             </Box>
-
         </Card>
     )
 }

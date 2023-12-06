@@ -9,13 +9,12 @@ export default function Home() {
   return (
     <>
       <Flex
-        height="100vh"
         alignItems="center"
-        justifyContent="center">
-        <Box width="30%">
+        justifyContent="space-evenly">
+        <Box margin="50px" >
           <Editor />
         </Box>
-        <Box width="50%">
+        <Box margin="50px">
           <Preview />
         </Box>
       </Flex>
