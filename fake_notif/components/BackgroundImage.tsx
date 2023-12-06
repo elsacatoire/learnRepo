@@ -8,11 +8,19 @@ type BackgroundImageProps = {
 };
 
 const BackgroundImage = ({ src, alt }: BackgroundImageProps) => {
-    const { title, description, image, background, updateContent } = useAppContext();
+    const { title,
+        description,
+        image,
+        background,
+        updateContent,
+        updateTitle,
+        updateDescription,
+        updateImage,
+        updateBackground } = useAppContext();
 
     const handleBackgroundChange = () => {
         // Update the background image in the context
-        updateContent(title, description, image, src);
+        updateBackground(src);
     };
 
     return (

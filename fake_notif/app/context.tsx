@@ -8,6 +8,10 @@ interface AppContextProps {
     image: string;
     background: string;
     updateContent: (title: string, description: string, image: string, background: string) => void;
+    updateTitle: (newTitle: string) => void;
+    updateDescription: (newDescription: string) => void;
+    updateImage: (newImage: string) => void;
+    updateBackground: (newBackground: string) => void;
 }
 
 // Set up the default for Editor component
@@ -37,6 +41,22 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
         setBackground(newBg);
     };
 
+    const updateTitle = (newTitle: string) => {
+        setTitle(newTitle);
+    };
+
+    const updateDescription = (newDescription: string) => {
+        setDescription(newDescription);
+    };
+
+    const updateImage = (newImage: string) => {
+        setImage(newImage);
+    };
+
+    const updateBackground = (newBackground: string) => {
+        setBackground(newBackground);
+    };
+
     // Context value containing dynamic data and update method
     const contextValue: AppContextProps = {
         title,
@@ -44,7 +64,11 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
         image,
         background,
         updateContent,
-    };
+        updateTitle,
+        updateDescription,
+        updateImage,
+        updateBackground,
+    }
 
     // Provide the context to the tree of components
     return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;

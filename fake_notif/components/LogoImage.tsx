@@ -7,10 +7,18 @@ type LogoImageProps = {
     alt: string;
 };
 const LogoImage = ({ src, alt }: LogoImageProps) => {
-    const { title, description, image, background, updateContent } = useAppContext();
+    const { title,
+        description,
+        image,
+        background,
+        updateContent,
+        updateTitle,
+        updateDescription,
+        updateImage,
+        updateBackground } = useAppContext();
 
     const handleLogoChange = () => {
-        updateContent(title, description, src, background)
+        updateImage(src)
     }
 
 

@@ -25,20 +25,29 @@ const Editor = () => {
         "/images/spotify.png"
     ]
 
-    const { title, description, image, background, updateContent } = useAppContext();
+    const { title,
+        description,
+        image,
+        background,
+        updateContent,
+        updateTitle,
+        updateDescription,
+        updateImage,
+        updateBackground } = useAppContext();
+
     const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newTitle = e.target.value;
-        updateContent(newTitle, description, image, background);
+        updateTitle(newTitle);
     };
 
     const handleDescriptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newDescription = e.target.value;
-        updateContent(title, newDescription, image, background);
+        updateDescription(newDescription);
     };
 
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newImage = e.target.value;
-        updateContent(title, description, newImage, background);
+        updateImage(newImage);
     };
 
 
